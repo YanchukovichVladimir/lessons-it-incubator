@@ -9,9 +9,8 @@ ul {
 }
 
 .hero {
-  width: 1440px;
   background: rgb(239, 242, 249);
-  height: 1024px;
+  height: 100vh;
 }
 
 .card {
@@ -20,12 +19,23 @@ ul {
   box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
   background-color: rgb(255, 255, 255);
   padding: 60px 0;
+
+  display: flex;
+}
+
+.preview-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
 }
 
 .preview {
   width: 80px;
   height: 80px;
   background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview.selected {
@@ -33,8 +43,17 @@ ul {
 }
 
 .product-img-block {
-  width: 540px;
+  min-width: 540px;
   border-right: 2px solid rgba(20, 20, 20, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-img-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-info-block {
@@ -83,6 +102,11 @@ ul {
   margin-bottom: 65px;
 }
 
+.color-options-list {
+  display: flex;
+  gap: 26px;
+}
+
 .circle {
   border-radius: 100%;
   box-shadow: 2px 2px 4px 0 rgba(81, 91, 117, 0.25);
@@ -122,6 +146,14 @@ ul {
   background-color:#d52f29;
 }
 
+.feature-block {
+  display: flex;
+}
+
+.feature-block > div {
+  flex: 1;
+}
+
 .quantity {
   width: 80px;
   height: 24px;
@@ -135,7 +167,7 @@ ul {
   appearance: none;
   background-image: url(./images/strike.svg);
   background-repeat:no-repeat ; 
-  background-position: right;
+  background-position: right 0 top 50%;
 }
 
 .price {
